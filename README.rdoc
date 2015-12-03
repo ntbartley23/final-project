@@ -1,0 +1,12 @@
+== README
+
+app idea
+
+
+  Idea: To create an app that evaluates educational milestones for children from accredited childcares to 12th grade homeschoolers
+
+background: When a parent decides to homeschool their child they must inform the school district of their decision.  The school district will send  a representative every school quarter to come and evaluate the child’s progress. 
+
+ problem. The school/state representative usually comes with a HUGE STACK of papers to fumble through as they try to juggle  testing the child for milestones, writing notes, and evaluating educational equipment.
+
+ Solution: This app will create an inventory for each child, their milestones, progress, and any files needed by the state/school. It will allow the school/state representative to evaluate the child, record their progress, then send the information to both the parent and the school. It will then store the information in it’s systems.
