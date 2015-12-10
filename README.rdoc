@@ -3,10 +3,85 @@
 app idea
 
 
-  Idea: To create an app that evaluates educational milestones for children from accredited childcares to 12th grade homeschoolers
+  Read Out loud
 
-background: When a parent decides to homeschool their child they must inform the school district of their decision.  The school district will send  a representative every school quarter to come and evaluate the child’s progress. 
+ idea
+ To build an app the works with children to help them read. 
+ 
+ function
+ It highlights the word. then when the words is said, it moves on to the next page or word depending on the level.
 
- problem. The school/state representative usually comes with a HUGE STACK of papers to fumble through as they try to juggle  testing the child for milestones, writing notes, and evaluating educational equipment.
+ example
+   The book will say: 
+  A Boy likes Bugs
 
- Solution: This app will create an inventory for each child, their milestones, progress, and any files needed by the state/school. It will allow the school/state representative to evaluate the child, record their progress, then send the information to both the parent and the school. It will then store the information in it’s systems.
+  the child will tap on the mic then speak
+ex: 
+ if
+ the boy says “ A Boy Likes Bugs
+	alert “Great Job!” 
+	Turn to the next page
+else if  null { 
+	 computer alert: (sound out the word)
+	listen for word to be repeated
+	}
+	 if word is repeated {	
+	alert “ great Job!”;
+}
+
+
+    The  entire IDEA
+The cover of the app will say “ Learn to read “
+//pics of cartoon characters 
+<buttons>
+	sign in     or     login  
+</=form sigin =/>
+//redirect to home page sign in
+**( fname/lname/email/address/bday) 
+**(ask if student is at home or school/daycare)
+
+    or
+ // login
+
+** New students will be prompt to choose levels
+0  letters
+phonics books
+ level 1  sight words 
+ level 2  sight words
+ level 3 sight words
+level 4 first little readers A
+level 5 first little readers B
+level 6 first little readers C 
+
+*parent can choose length of time to study ( generally 0-1hr)
+
+ ** once level is chosen. Child can enter reading class
+  < H1> Welcome to class #{child name} 
+ the level choice ciriculum will be there  like sight words or first little reader books.
+
+ user can click on the book 
+  * the book will open to the first page 
+  *the child will touch the microphone then repeat the word. 
+** if the child gets the word right the computer says Great job then turns page
+ ** if kid has trouble, computer makes letter sound then listens for child to repeat
+ *** once child gets it right, computer will congratulate them and turn page
+
+ * student/parent can then exit app
+ ** uses data base to record how far student got 
+** keeps track of students info for later login sessions ( so once student logs in you can see the last book they read, how words they struggled with, rates progress
+** options to send progress report to parent/ teachers 
+
+ 
+once all books are read for that level
+ a page with a certificate ( print/email option) will appear
+then child is prompted to join next level
+
+ Once child has completed all levels, 
+ page will appear with other educational apps recommendations
+
+
+ This app uses the Google Voice API and websockets for fast Real time processing speeds.
+
+   Future of this application
+
+    The application ( as copywritten) will listen to persons of al ages read to the listening monitor device( tablet, computer,phone etc.) It will follow along counting speed and accuracy. it will then produce a score that can be evaluated by self, evaluating personel, anyone. This evaluation will tell examinee's educations weakness and strengths. This application will work in collaboration with teaching languages, checking for assignment completion  for virtual learners. This application will also grade assignments and record progress in learners. This is a B-COTech product.
