@@ -1,6 +1,6 @@
-class CreateGrades < ActiveRecord::Migration
+class CreateStories < ActiveRecord::Migration
   def change
-    create_table :grades do |t|
+    create_table :stories do |t|
       t.integer :numword
       t.time :start_time
       t.time :end_time
