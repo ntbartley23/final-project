@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-root 'home#index'  
+root 'home#index' 
+get "/teachers/sign_in" => "teachers#show"
+post "/teachers/sign_in" => "teachers#create"
  resources :teachers
  resources :students
  resources :stories

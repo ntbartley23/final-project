@@ -1,0 +1,13 @@
+<%= form_for @student do |f| %>
+<%=f.label "First name" %>
+<%=f.text_field :fname %>
+<%= f.label "Last name" %>
+<%= f.text_field :lname %>
+<%= f.label "Birthdate" %>
+<%= f.text_field :birthdate %>
+<%= f.label "Teacher's Id Number" %>
+<%= f.text_field :teacher_id %>
+
+<%= f.submit %>
+
+<% end %>

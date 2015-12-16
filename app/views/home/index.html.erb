@@ -1,1 +1,38 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+<div id="home_title">
+<title> Read Out Loud/home </title>
+</div>
 <h1> Read Out Loud </h1>
+	<div id="teacher_buttons"> 
+	<h3>Teachers</h3>
+	<button type="button"> 
+	<%=link_to('Login Here', teachers_path(params[:id])) %>
+	</button>
+	<button type="button"> 
+	<%=link_to('Sign In Here', new_teacher_path) %>
+	</button>
+</div>
+
+<div id="student_button">
+<h3> Students </h3>
+<button type="button">
+	<%=link_to('login Here', students_path(params[:id])) %>
+</button>
+	<button type="button">
+		<%=link_to('Sign In Here', new_student_path) %>
+	</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
