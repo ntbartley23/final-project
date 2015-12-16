@@ -1,15 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  numword: 1
-  start_time: 2015-12-09 00:20:07
-  end_time: 2015-12-09 00:20:07
-  book_title: MyString
+  score: 1
   student_id: 1
+  story_id: 
 
 two:
-  numword: 1
-  start_time: 2015-12-09 00:20:07
-  end_time: 2015-12-09 00:20:07
-  book_title: MyString
+  score: 1
   student_id: 1
+  story_id: 
