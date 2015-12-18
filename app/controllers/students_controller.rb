@@ -44,7 +44,7 @@ class StudentsController < ApplicationController
 
 
 
-private
+ private
 	 
 	 def student_params
 	 	params.require(:student).permit(:fname, :lname, :birthdate)

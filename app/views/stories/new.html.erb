@@ -1,0 +1,12 @@
+<div id="stories_button">
+<%= form_for @story do |f| %>
+<%=f.label "Book Title" %>
+<%=f.text_field :book_title %>
+<%= f.submit %>
+
+<% end %>
+
+<button type="button">
+	<%=link_to('View Stories', stories_path) %>
+</button>
+</div>

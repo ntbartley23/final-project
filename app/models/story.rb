@@ -1,4 +1,5 @@
 class Story < ActiveRecord::Base
-	has_many :students
-	has_many :grades through :students
+	belongs_to :teachers
+	has_many :grades
+	has_many :students, through: :grades
 end

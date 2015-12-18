@@ -2,3 +2,6 @@
 	<h1>Welcome <%= @student.fname %> <%= @student.lname %></h1>
 </div>
 
+<button type="button">
+	<%=link_to('View Stories', stories_path(params[:id])) %>
+</button>
