@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>stories</title>
@@ -7,10 +7,16 @@
 
 
 
-<img src="assets/sightwords1.jpg">
-<button type="button">
-	<%=link_to('Start Reading', story_path) %>
-</button>
+<!-- <img src="assets/sightwords1.jpg"> 
+<button type="button"> -->
+	
+	<% @stories.each do |story| %>
+	<img src="assets/sightwords1.jpg"> 
+	<%=link_to('Start Reading', story_path(story)) %>
+	<%=puts story.inspect %>
+	
+	<%end %>
+<!-- </button> -->
 
 </body>
 </html>
