@@ -30,9 +30,9 @@
 <script src="../bower_components/platform/platform.js"></script>
 <script src="../build/webspeech.min.js"></script>
 <script>
-	/*var speaker = new RobotSpeaker();
+	var speaker = new RobotSpeaker();
     var listener = new AudioListener();
-	*/
+	
    var speaker; 
 	try{
 		speaker	= new RobotSpeaker();
@@ -55,6 +55,7 @@
 			speaker.speak("en", document.getElementById("text").value);
 		}
     }
+    
     function listen() {
 		if(listener){
 			listener.listen("en", function(text) {
@@ -66,8 +67,8 @@
 
     // var listener;
     //  listener = :attempted_phrase
-    //   function read {
-    //   	if :attempted_phrase == :phrase
+    //   function  read 
+    //   	while :attempted_phrase == :phrase
     //   	 	flash[:notice]= "great job"
     //   }
     

@@ -1,16 +1,16 @@
 class TeachersController < ApplicationController
 
-def new
+ def new
 	@teacher = Teacher.new
+ end
 
-	end
   def index
-  	@teacher = Teacher.find(params[:id]
+  	@teacher = Teacher.all
   end
   	
-  end
+  
 	def create
-		@teacher = Teacher.new(teacher_params)
+		@teacher = Teacher.new(teacher_params[:id])
 		 if @teacher.save
 		 	flash[:notice] = "New teacher created"
 		 	redirect_to teacher_path(@teacher)

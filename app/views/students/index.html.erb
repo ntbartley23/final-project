@@ -1,7 +1,13 @@
   <div id="login">
-    <%= form_tag '/sessions' do %>
+    <%= form_tag '/students' do %>
     <!-- ruby method   :argument1, arg2, hash with key: "value" -->
     <%= text_field_tag :fname, nil, placeholder: "first name" %>
     <%= text_field_tag :lname, nil, placeholder: "last name" %>
     <%= submit_tag "log in" %>
     <% end %>
+
+    <div id="Sign Up">
+    	<button type="button">
+	<%=link_to('New Students', new_student_path) %>
+		</button>
+    </div>
