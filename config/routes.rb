@@ -7,6 +7,7 @@ post "/teachers/sign_in" => "teachers#create"
  resources :teachers
  resources :students
  resources :stories
+ resources :grades
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

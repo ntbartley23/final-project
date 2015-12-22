@@ -4,7 +4,11 @@ def new
 	@teacher = Teacher.new
 
 	end
-
+  def index
+  	@teacher = Teacher.find(params[:id]
+  end
+  	
+  end
 	def create
 		@teacher = Teacher.new(teacher_params)
 		 if @teacher.save
