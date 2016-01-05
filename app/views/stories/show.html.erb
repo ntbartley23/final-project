@@ -1,8 +1,10 @@
 
-
-<div class="hi">
-	<h3> Hi </h3>
+<p id="word">
+	<% @story.phrases.order(:order).each do |phrase| %>
+<div id="#{phrase.id}">
+	"#{phrase.text}"
 </div>
+<% end %>
 
 <div class="nose">
 	<h3> Nose </h3>
@@ -19,7 +21,7 @@
 <div class="boy">
 	<h3> Boy </h3>
 </div>
-
+</p>
 
 
 <input id="text">
@@ -55,7 +57,7 @@
 			speaker.speak("en", document.getElementById("text").value);
 		}
     }
-     
+
     function listen() {
 		if(listener){
 			listener.listen("en", function(text) {

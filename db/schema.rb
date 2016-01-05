@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151218190646) do
+ActiveRecord::Schema.define(version: 20160104200151) do
 
   create_table "grades", force: :cascade do |t|
     t.integer  "score"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 20151218190646) do
     t.string   "attempted_phrase"
   end
 
+  create_table "phrases", force: :cascade do |t|
+    t.string   "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stories", force: :cascade do |t|
     t.integer  "numword"
     t.time     "start_time"
@@ -32,7 +38,7 @@ ActiveRecord::Schema.define(version: 20151218190646) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "teacher_id"
-    t.string   "phrase"
+    t.integer  "phrase_id"
   end
 
   create_table "students", force: :cascade do |t|
