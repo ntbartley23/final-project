@@ -11,6 +11,7 @@
         font-size: 16px;
         overflow: hidden;
       }
+
       body {
         cursor: pointer;
         width: 100%;
@@ -34,6 +35,7 @@
         -o-transform-style: preserve-3d;
         transform-style: preserve-3d;
       }
+
       #myBook {
         left: 600px;
         top: 50px;
@@ -50,6 +52,7 @@
         transform-style: preserve-3d;
         position: absolute;
       }
+
       #myBook .book > div:first-child {
         -webkit-transform: rotateY(-150deg);
         -moz-transform: rotateY(-150deg);
@@ -57,6 +60,7 @@
         -o-transform: rotateY(-150deg);
         transform: rotateY(-150deg);
       }
+
       .book, .book > div {
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
@@ -65,6 +69,7 @@
         transform-style: preserve-3d;
         position: absolute;
       }
+
       .book > div {
         -webkit-transition: 1s ease-in-out;
         -moz-transition: 1s ease-in-out;
@@ -72,6 +77,7 @@
         -o-transition: 1s ease-in-out;
         transition: 1s ease-in-out;
       }
+
       /* Front of a page */
       .book > div > div:first-child {
 background: #ffffff; /* Old browsers */
@@ -96,6 +102,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         padding-bottom: 80px;
         border-left: 2px solid #000;
       }
+
       /* Back of a page */
       .book > div > div:last-child {
         background-color: white;
@@ -121,6 +128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         padding-bottom: 80px;
         border-right: 2px solid #000;
       }
+
       /* covers */
       .book > div:first-child > div:first-child, .book > div:last-child > div:last-child {
         background: #ffffff; /* Old browsers */
@@ -136,10 +144,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         margin-left: -1px;
         margin-top: -1px;
       }
+
       h1 {
         margin-top: 200px;
         font-family: Cochin, sans-serif;
       }
+
       .book-pages p {
         text-align: left;
       }
@@ -156,15 +166,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
             <h1>Level 1 Sight Words</h1>
           </div>
           <div>
-            <h1>By Edgar Allan P</h1>
+            <h1>By Moms Who Teach</h1>
           </div>
         </div>
         
-        <div>
+        <!-- <div>
           <div>
-            <h1>2012 Bogus HTML Hipster Publishing Inc.</h1>
             <h2>Copy-pasted from <a href="http://www.gutenberg.org/ebooks/2148">Project Gutenberg</a></h2>
-          </div>
+          </div> -->
           <div>
             <p>This page intentionally left blank.</p>
           </div>
@@ -174,6 +183,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
           <div class="book-pages">
 <h2>
     A DESCENT INTO THE MAELSTRÖM.
+<!-- </h2>
 </h2>
 <p>
 <div id="2">
@@ -196,7 +206,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 <p>
 <div id="5">
   hello
+</div> -->
+
+<p style="font-family:monospace;font-size:small;">
+  The ways of God in Nature, as in Providence, are not as our
+  ways;  nor are the models that we frame any way commensurate to the
+  vastness, profundity, and unsearchableness of His works, which have
+  a depth in them greater than the well of Democritus.
+<br><br>
+  Joseph Glanville.
+</p>
+<p>
+WE had now reached the summit of the loftiest crag. For some minutes the
+old man seemed too much exhausted to speak.
+</p>
+<p>
+"Not long ago," said he at length, "and I could have guided you on this
+route as well as the youngest of my sons; but, about three years past,
+there happened to me an event such as never happened to mortal man&mdash;or
+at least such as no man ever survived to tell of&mdash;and the six hours of
+deadly terror which I then endured have broken me up body and soul. You
+suppose me a <i>very</i> old man&mdash;but I am not. It took less than a single
+day to change these hairs from a jetty black to white, to weaken
+my limbs, and to unstring my nerves, so that I tremble at the least
+exertion, and am frightened at a shadow. Do you know I can scarcely look
+over this little cliff without getting giddy?"
+</p>
 </div>
+<div class="book-pages">
+<p>
+The "little cliff," upon whose edge he had so carelessly thrown himself
+down to rest that the weightier portion of his body hung over it, while
+he was only kept from falling by the tenure of his elbow on its extreme
+and slippery edge&mdash;this "little cliff" arose, a sheer unobstructed
+precipice of black shining rock, some fifteen or sixteen hundred feet
+from the world of crags beneath us. Nothing would have tempted me to
+within half a dozen yards of its brink. In truth so deeply was I excited
+by the perilous position of my companion, that I fell at full length
+upon the ground, clung to the shrubs around me, and dared not even
+glance upward at the sky&mdash;while I struggled in vain to divest myself of
+the idea that the very foundations of the mountain were in danger from
+the fury of the winds. It was long before I could reason myself into
+sufficient courage to sit up and look out into the distance.
+</p>
 
 </div>
 <div class="book-pages">
@@ -207,50 +259,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       </div>
     </div>
 
-    <script type="text/javascript" src="assets/stories.js">
+
+    <script type="text/javascript" src="book.js">
     </script>
 
   </body>
 </html>
-
-
-
-
- 
-
-
-<!-- <p id="word">
-	<% @story.phrases(:order).each do |phrase| %>
-<div id="#{phrase.id}">
-	"#{phrase.text}"
-</div>
-<% end %>
-</p>
-<div class="nose">
-	<h3> Nose </h3>
-</div>
-
-<div class="eyes">
- <h3> Eyes </h3>
-</div>
-
-<div class="ears">
-<h3> Ears </h3>
-</div>
-
-<div class="boy">
-	<h3> Boy </h3>
-</div>
-</p> -->
-
 
 <input id="text">
 <button onclick="talk()">Talk It!</button>
 <button onclick="listen()">Voice</button>
 <br/>
 <p id="status" style="color: red"></p>
-<script src="../bower_components/platform/platform.js"></script>
-<script src="../build/webspeech.min.js"></script>
+
 <script>
 	var speaker = new RobotSpeaker();
     var listener = new AudioListener();
@@ -303,10 +324,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     
 </script>
 
-
-
-    <script type="text/javascript" src="/stories.js">
-    </script>
-
-  </body>
-</html>

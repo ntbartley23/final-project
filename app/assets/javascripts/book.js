@@ -1,4 +1,3 @@
-
 vendorMadness = function(e, k, v) {
   var s = e.style;
   var cap = k.substring(0,1).toUpperCase() + k.substring(1);
@@ -31,6 +30,36 @@ for (var i = 0; i < books.length; i++) {
   }
 }
 })();
+// (function(){
+//   // Get all the pages.
+//   var pages = document.querySelectorAll('.book > div');
+//   var currentPage = 0;
+  
+//   // Go to previous page when clicking on left side of window.
+//   // Go to the next page when clicking on the right side.
+//   window.onclick = function(ev) {
+//     if (ev.clientX < window.innerWidth/2) {
+//       previousPage();
+//     } else {
+//       nextPage();
+//     }
+//     ev.preventDefault();
+//   };
+//   var previousPage = function() {
+//     if (currentPage > 0) {
+//       currentPage--;
+//             // Rotate the page to closed position and move it to its place in the closed page stack.
+//       setTransform(pages[currentPage], 'translate3d(0px,0px,' + (-currentPage) + 'px) rotateY(0deg)');
+//     }
+//   };
+//   var nextPage = function() {
+//     if (currentPage < pages.length) {
+//             // Rotate the page to open position and move it to its place in the opened stack.
+//       setTransform(pages[currentPage], 'translate3d(0px,0px,' + currentPage + 'px) rotateY(-150deg)');
+//       currentPage++;
+//     }
+//   };
+// })();
 
 (function() {
 var px,py,sx,sy,down,rot=0,rotX=0,rotY=0,cancel;
@@ -91,27 +120,27 @@ var nextPage = function() {
 
 return;
 
- deprecated draggable page-turner
-window.onmousemove = function(ev) {
-  if (down) {
-    var x = ev.clientX;
-    var y = ev.clientY;
-    var dx = x-px;
-    var dy = y-py;
-    px = x;
-    py = y;
-    rot = Math.min(0, Math.max(-150, rot+dx*2));
-    var p = ((rot / -150)) * 2 * currentPage + -currentPage;
-    setTransform(pages[currentPage], 'translate3d(0px,0px,'+p+'px) rotateY('+ rot + 'deg)');
-    if (rot == -150 && currentPage < pages.length-1) {
-      currentPage++;
-      rot = 0;
-    } else if (rot == 0 && currentPage > 0) {
-      currentPage--;
-      rot = -150;
-    }
-    ev.preventDefault();
-  }
-};
+//  deprecated draggable page-turner
+// window.onmousemove = function(ev) {
+//   if (down) {
+//     var x = ev.clientX;
+//     var y = ev.clientY;
+//     var dx = x-px;
+//     var dy = y-py;
+//     px = x;
+//     py = y;
+//     rot = Math.min(0, Math.max(-150, rot+dx*2));
+//     var p = ((rot / -150)) * 2 * currentPage + -currentPage;
+//     setTransform(pages[currentPage], 'translate3d(0px,0px,'+p+'px) rotateY('+ rot + 'deg)');
+//     if (rot == -150 && currentPage < pages.length-1) {
+//       currentPage++;
+//       rot = 0;
+//     } else if (rot == 0 && currentPage > 0) {
+//       currentPage--;
+//       rot = -150;
+//     }
+//     ev.preventDefault();
+//   }
+// };
 
 })();
