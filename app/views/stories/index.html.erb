@@ -10,7 +10,7 @@
 <!-- <img src="assets/sightwords1.jpg"> 
 <button type="button"> -->
 	
-	<% @stories.each do |story| %>
+	<%@stories.each do |story| %>
 	<img src="assets/sightwords1.jpg"> 
 	<%=link_to('Start Reading', story_path(story)) %>
 	<%=puts story.inspect %>
