@@ -278,12 +278,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 		}
     }
 
-    var test = 2;
+    
 
     function listen() {
 		if(listener){
 			listener.listen("en", function(text) {
-        document.getElementById("2").value = innerHTML;
+        var test = document.getElementsById("2").innerHTML;
 				document.getElementById("text").value = text;
         if (test == text) {
           alert ("Great Job Steph!");
