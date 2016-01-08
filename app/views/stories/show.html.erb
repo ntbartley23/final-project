@@ -3,8 +3,9 @@
   <head>
 
     <meta charset="utf-8" />
+
     <style>
-      html {
+html {
         width: 100%;
         height: 100%;
         font-family: Times;
@@ -153,119 +154,222 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       .book-pages p {
         text-align: left;
       }
-    </style>
+
+</style>
 
   </head>
   <body>
 
-    <div id="myBook">
-      <div class="book">
-
-        <div>
-          <div>
-            <h1>Level 1 Sight Words</h1>
-          </div>
-          <div>
-            <h1>By Moms Who Teach</h1>
-          </div>
-        </div>
+      <div id="myBook">
         
-        <!-- <div>
-          <div>
-            <h2>Copy-pasted from <a href="http://www.gutenberg.org/ebooks/2148">Project Gutenberg</a></h2>
-          </div> -->
-          <div>
-            <p>This page intentionally left blank.</p>
-          </div>
+        <div class="book">
+
+            <div>
+              <h1>Level 1 Sight Words</h1>
+            </div>
+            <div>
+              <h2>By Moms Who Teach</h2>
+            </div>
+
         </div>
-
-        <div>
-          <div class="book-pages">
-<h2>
-    A DESCENT INTO THE MAELSTRÖM.
-<!-- </h2>
-</h2>
-<p>
-<div id="2">
- nose
-</div>
-</p>
-
-<p>
-<div id="3">
-  boy
-</div>
-</p>
-
-<p>
-<div id="4">
-  girl
-</div>
-</p>
-
-<p>
-<div id="5">
-  hello
-</div> -->
-
-<p style="font-family:monospace;font-size:small;">
-  The ways of God in Nature, as in Providence, are not as our
-  ways;  nor are the models that we frame any way commensurate to the
-  vastness, profundity, and unsearchableness of His works, which have
-  a depth in them greater than the well of Democritus.
-<br><br>
-  Joseph Glanville.
-</p>
-<p>
-WE had now reached the summit of the loftiest crag. For some minutes the
-old man seemed too much exhausted to speak.
-</p>
-<p>
-"Not long ago," said he at length, "and I could have guided you on this
-route as well as the youngest of my sons; but, about three years past,
-there happened to me an event such as never happened to mortal man&mdash;or
-at least such as no man ever survived to tell of&mdash;and the six hours of
-deadly terror which I then endured have broken me up body and soul. You
-suppose me a <i>very</i> old man&mdash;but I am not. It took less than a single
-day to change these hairs from a jetty black to white, to weaken
-my limbs, and to unstring my nerves, so that I tremble at the least
-exertion, and am frightened at a shadow. Do you know I can scarcely look
-over this little cliff without getting giddy?"
-</p>
-</div>
-<div class="book-pages">
-<p>
-The "little cliff," upon whose edge he had so carelessly thrown himself
-down to rest that the weightier portion of his body hung over it, while
-he was only kept from falling by the tenure of his elbow on its extreme
-and slippery edge&mdash;this "little cliff" arose, a sheer unobstructed
-precipice of black shining rock, some fifteen or sixteen hundred feet
-from the world of crags beneath us. Nothing would have tempted me to
-within half a dozen yards of its brink. In truth so deeply was I excited
-by the perilous position of my companion, that I fell at full length
-upon the ground, clung to the shrubs around me, and dared not even
-glance upward at the sky&mdash;while I struggled in vain to divest myself of
-the idea that the very foundations of the mountain were in danger from
-the fury of the winds. It was long before I could reason myself into
-sufficient courage to sit up and look out into the distance.
-</p>
-
-</div>
-<div class="book-pages">
-<h1>To be continued...</h1>
-</div>
-</div>
-
       </div>
+
+    <div>
+     <div class="book-pages">
+      <h2>
+       A DESCENT INTO THE MAELSTRÖM.
+      </h2>
+     </div>
+     <div class="book-pages"> </div>
+
     </div>
 
+  <p>
+   <div>
+    <div class="book-pages" id="1">
+      nose
+    </div>  
+    <div class="book-pages" id="2">
+      eyes 
+    </div>
+   </div>
+  </p>
 
-    <script type="text/javascript" src="book.js">
-    </script>
+  <p>
+  <div>
+    <div class="book-pages" id="3">
+     he
+    </div>  
+    <div class="book-pages" id="4">
+      she
+    </div>
+  </div>
+  </p>
 
-  </body>
-</html>
+  <p>
+ <div>
+   <div class="book-pages" id="5">
+    the
+   </div>  
+  <div class="book-pages" id="6">
+    Be 
+  </div>
+ </div>
+  
+  
 
+<div class="book-pages">
+<h1>The End</h1>
+</div>
+
+<script>
+vendorMadness = function(e, k, v) {
+  var s = e.style;
+  var cap = k.substring(0,1).toUpperCase() + k.substring(1);
+  s['webkit'+cap] = 
+  s['Moz'+cap] = 
+  s['ms'+cap] = 
+  s['O'+cap] = 
+  s[k] = v;
+};
+
+setTransform = function(e, v) {
+  var s = e.style;
+  s.webkitTransform = 
+  s.MozTransform =
+  s.msTransform =
+  s.OTransform =
+  s.transform = v;
+};
+
+(function() {
+var books = document.querySelectorAll('.book');
+
+for (var i = 0; i < books.length; i++) {
+  var book = books[i];
+  var pages = book.childNodes;
+  for (var j = 0; j < pages.length; j++) {
+    if (pages[j].tagName == "DIV") {
+      setTransform(pages[j], 'translate3d(0px, 0px, '+(-j)+'px)');
+    }
+  }
+}
+})();
+// (function(){
+//   // Get all the pages.
+//   var pages = document.querySelectorAll('.book > div');
+//   var currentPage = 0;
+  
+//   // Go to previous page when clicking on left side of window.
+//   // Go to the next page when clicking on the right side.
+//   window.onclick = function(ev) {
+//     if (ev.clientX < window.innerWidth/2) {
+//       previousPage();
+//     } else {
+//       nextPage();
+//     }
+//     ev.preventDefault();
+//   };
+//   var previousPage = function() {
+//     if (currentPage > 0) {
+//       currentPage--;
+//             // Rotate the page to closed position and move it to its place in the closed page stack.
+//       setTransform(pages[currentPage], 'translate3d(0px,0px,' + (-currentPage) + 'px) rotateY(0deg)');
+//     }
+//   };
+//   var nextPage = function() {
+//     if (currentPage < pages.length) {
+//             // Rotate the page to open position and move it to its place in the opened stack.
+//       setTransform(pages[currentPage], 'translate3d(0px,0px,' + currentPage + 'px) rotateY(-150deg)');
+//       currentPage++;
+//     }
+//   };
+// })();
+
+(function() {
+var px,py,sx,sy,down,rot=0,rotX=0,rotY=0,cancel;
+var cardPage = document.querySelector('#myBook > div');
+var pages = document.querySelectorAll('#myBook > div > div');
+var currentPage = 0;
+
+window.onmousedown = function(ev) {
+  down = true;
+  cancel = false;
+  sx = px = ev.clientX;
+  sy = py = ev.clientY;
+  ev.preventDefault();
+};
+
+window.onmouseup = function(ev) {
+  down = false;
+};
+
+window.onmousemove = function(ev) {
+  if (down) {
+    var x = ev.clientX;
+    var y = ev.clientY;
+    var dx = x-px;
+    var dy = y-py;
+    px = x;
+    py = y;
+    cancel = cancel || ((x-sx)*(x-sx)+(y-sy)*(y-sy) > 25);
+    rotX -= dy * 1;
+    rotY -= dx * 1;
+    setTransform(cardPage, 'rotateX('+rotX+'deg) rotateY('+rotY+'deg)');
+    ev.preventDefault();
+  }
+};
+
+window.onclick = function(ev) {
+  if (cancel) return;
+  if (ev.clientX < 600) {
+    previousPage();
+  } else {
+    nextPage();
+  }
+  ev.preventDefault();
+};
+
+var previousPage = function() {
+  if (currentPage > 0) {
+    currentPage--;
+    setTransform(pages[currentPage], 'translate3d(0px,0px,'+(-currentPage)+'px) rotateY(0deg)');
+  }
+};
+var nextPage = function() {
+  if (currentPage < pages.length) {
+    setTransform(pages[currentPage], 'translate3d(0px,0px,'+currentPage+'px) rotateY(-150deg)');
+    currentPage++;
+  }
+};
+
+return;
+
+//  deprecated draggable page-turner
+// window.onmousemove = function(ev) {
+//   if (down) {
+//     var x = ev.clientX;
+//     var y = ev.clientY;
+//     var dx = x-px;
+//     var dy = y-py;
+//     px = x;
+//     py = y;
+//     rot = Math.min(0, Math.max(-150, rot+dx*2));
+//     var p = ((rot / -150)) * 2 * currentPage + -currentPage;
+//     setTransform(pages[currentPage], 'translate3d(0px,0px,'+p+'px) rotateY('+ rot + 'deg)');
+//     if (rot == -150 && currentPage < pages.length-1) {
+//       currentPage++;
+//       rot = 0;
+//     } else if (rot == 0 && currentPage > 0) {
+//       currentPage--;
+//       rot = -150;
+//     }
+//     ev.preventDefault();
+//   }
+// };
+
+})();
+</script>
 <input id="text">
 <button onclick="talk()">Talk It!</button>
 <button onclick="listen()">Voice</button>
@@ -273,54 +377,49 @@ sufficient courage to sit up and look out into the distance.
 <p id="status" style="color: red"></p>
 
 <script>
-	var speaker = new RobotSpeaker();
+  var speaker = new RobotSpeaker();
     var listener = new AudioListener();
-	
+  
    var speaker; 
-	try{
-		speaker	= new RobotSpeaker();
-	}
-	catch(ex){
-		speaker = null;
-		document.getElementById("status").innerHTML = ex;
-	}
+  try{
+    speaker = new RobotSpeaker();
+  }
+  catch(ex){
+    speaker = null;
+    document.getElementById("status").innerHTML = ex;
+  }
     var listener; 
-	try{
-		listener = new AudioListener();
-	}
-	catch(ex){
-		listener = null;
-		document.getElementById("status").innerHTML = ex;
-	}
-	
+  try{
+    listener = new AudioListener();
+  }
+  catch(ex){
+    listener = null;
+    document.getElementById("status").innerHTML = ex;
+  }
+  
     function talk() {
-		if(speaker){
-			speaker.speak("en", document.getElementById("text").value);
-		}
+    if(speaker){
+      speaker.speak("en", document.getElementById("text").value);
+    }
     }
 
     
 
     function listen() {
-		if(listener){
-			listener.listen("en", function(text) {
+    if(listener){
+      listener.listen("en", function(text) {
         var test = document.getElementsById("2").innerHTML;
-				document.getElementById("text").value = text;
+        document.getElementById("text").value = text;
         if (test == text) {
           alert ("Great Job Steph!");
         };
 
-			});
-		}
+      });
     }
+  }
 
-
-    // var listener;
-    //  listener = :attempted_phrase
-    //   function  read 
-    //   	while :attempted_phrase == :phrase
-    //   	 	flash[:notice]= "great job"
-    //   }
     
 </script>
 
+</body>
+</html>
