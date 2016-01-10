@@ -104,6 +104,7 @@
         Languages: {
             ENGLISH: "en",
             FRENCH: "fr"
+            SPANISH: "es"
         }
     };
     if (!window.webspeech) {
