@@ -1,19 +1,26 @@
+<div id="sign_up">
 <%= form_for @teacher do |f| %>
 <%=f.label "first name" %>
 <%=f.text_field :fname %>
+<br>
 <%= f.label "last name" %>
 <%= f.text_field :lname %>
-<%= f.label :email %>
+<br>
+<%= f.label "email" %>
 <%= f.text_field :email %>
-<%= f.label :password %>
+<br>
+<%= f.label "password" %>
 <%= f.password_field :password %>
+<br>
 <%= f.label "Teacher Address" %>
 <%= f.text_field :address %>
+<br>
 <%= f.label "School Name" %>
 <%=f.text_field  :sname %>
+<br>
 <%= f.label "School Address" %>
 <%=f.text_field :saddress %>
-
+<br>
 <%= f.submit %>
 
 <% end %>
@@ -21,3 +28,4 @@
 <button type="button">
 	<%=link_to('Create A New Student', new_student_path) %>
 </button>
+</div>

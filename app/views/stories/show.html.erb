@@ -17,7 +17,6 @@
         font-size: 16px;
         overflow: hidden;
       }
-
       body {
         cursor: pointer;
         width: 100%;
@@ -41,7 +40,6 @@
         -o-transform-style: preserve-3d;
         transform-style: preserve-3d;
       }
-
        #input {
         margin-top: 30px;
         margin-left: 30px;
@@ -67,7 +65,6 @@
         transform-style: preserve-3d;
         position: absolute;
       }
-
       #myBook .book > div:first-child {
         -webkit-transform: rotateY(-150deg);
         -moz-transform: rotateY(-150deg);
@@ -75,7 +72,6 @@
         -o-transform: rotateY(-150deg);
         transform: rotateY(-150deg);
       }
-
       .book, .book > div {
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
@@ -84,7 +80,6 @@
         transform-style: preserve-3d;
         position: absolute;
       }
-
       .book > div {
         -webkit-transition: 1s ease-in-out;
         -moz-transition: 1s ease-in-out;
@@ -92,7 +87,6 @@
         -o-transition: 1s ease-in-out;
         transition: 1s ease-in-out;
       }
-
       /* Front of a page */
       .book > div > div:first-child {
 background: #ffffff; /* Old browsers */
@@ -117,7 +111,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         padding-bottom: 80px;
         border-left: 2px solid #000;
       }
-
       /* Back of a page */
       .book > div > div:last-child {
         background-color: white;
@@ -143,7 +136,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         padding-bottom: 80px;
         border-right: 2px solid #000;
       }
-
       /* covers */
       .book > div:first-child > div:first-child, .book > div:last-child > div:last-child {
         background: #ffffff; /* Old browsers */
@@ -159,12 +151,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         margin-left: -1px;
         margin-top: -1px;
       }
-
       h1 {
         margin-top: 200px;
         font-family: Cochin, sans-serif;
       }
-
       .book-pages p {
         text-align: center;
         font-size: 40px;
@@ -222,7 +212,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 <br/> <br/>
 </p>
 <p>
-<span id="3">Bonjour</span>
+<span id="3">ca va</span>
 </p>
 </div>
 </div>
@@ -232,7 +222,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 </div>
 <div class="book-pages">
 <p>
-<span id="4">Mountain</span>
+<span id="4">mountain</span>
 </p>
 </div>
 </div>
@@ -314,7 +304,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   s['O'+cap] = 
   s[k] = v;
 };
-
 setTransform = function(e, v) {
   var s = e.style;
   s.webkitTransform = 
@@ -323,10 +312,8 @@ setTransform = function(e, v) {
   s.OTransform =
   s.transform = v;
 };
-
 (function() {
 var books = document.querySelectorAll('.book');
-
 for (var i = 0; i < books.length; i++) {
   var book = books[i];
   var pages = book.childNodes;
@@ -337,13 +324,11 @@ for (var i = 0; i < books.length; i++) {
   }
 }
 })();
-
 (function() {
 var px,py,sx,sy,down,rot=0,rotX=0,rotY=0,cancel;
 var cardPage = document.querySelector('#myBook > div');
 var pages = document.querySelectorAll('#myBook > div > div');
 var currentPage = 0;
-
 window.onmousedown = function(ev) {
   down = true;
   cancel = false;
@@ -351,11 +336,9 @@ window.onmousedown = function(ev) {
   sy = py = ev.clientY;
   ev.preventDefault();
 };
-
 window.onmouseup = function(ev) {
   down = false;
 };
-
 window.onmousemove = function(ev) {
   if (down) {
     var x = ev.clientX;
@@ -371,7 +354,6 @@ window.onmousemove = function(ev) {
     ev.preventDefault();
   }
 };
-
 window.onclick = function(ev) {
   if (cancel) return;
   if (ev.clientX < 600) {
@@ -381,7 +363,6 @@ window.onclick = function(ev) {
   }
   ev.preventDefault();
 };
-
 var previousPage = function() {
   if (currentPage > 0) {
     currentPage--;
@@ -394,11 +375,8 @@ var nextPage = function() {
     currentPage++;
   }
 };
-
 return;
-
 /* deprecated draggable page-turner
-
 window.onmousemove = function(ev) {
   if (down) {
     var x = ev.clientX;
@@ -425,8 +403,8 @@ window.onmousemove = function(ev) {
 </script>
 <div id="input">
   <input id="text">
-<button onclick="talk()">Talk It!</button>
-<button onclick="listen()">Voice</button>
+  <button onclick="talk()">Talk It!</button>
+  <button onclick="listen()">Voice</button>
 </div>
 
 <script>
@@ -450,12 +428,9 @@ $.getJSON('http://anyorigin.com/get?url=google.com&callback=?', function(data){
           
              // document.geElementById("text").value = "";
              listener.stop();
-
             };
            });
         };
-
-        
     
 </script>
 
