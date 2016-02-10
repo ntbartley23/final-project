@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#sign-in {
+#sign_up {
 	background-image: url("http://www.globaltesol.com/images/homepage-slider/104658897.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -12,12 +12,86 @@
     
 }
 
+* {
+  box-sizing:border-box;
+}
+
+.container_sign_up {
+
+  margin:10px auto;
+  width:460px;
+  padding:40px;
+}
+
+.fields {
+  position:relative;
+  float:left;
+  margin:5px;
+}
+
+input {
+  top:1px;
+  padding:7px 10px;
+  border:none;
+  outline:none;
+  background:#50597b;
+  color:#fff;
+  width:16em;
+}
 
 
- #login {
-     display: table; 
-     margin-right: auto; 
-     margin-left: auto;
+label {
+  color:#878fa9;
+  position:absolute;
+  z-index:1;
+  top:2px;
+  left:0;
+  background:#50597b;
+  padding:7px 4px;
+  margin:2px 0px;
+  transition: top 1s;
+  -webkit-transition: top 1s;
+}
+
+.fields:hover  label {
+  top:-24px;
 
 }
 
+.fields.bottom:hover label {
+  top:27px;
+}
+
+
+
+
+.submitForm {
+  border:none;
+  background:#e64c65;
+  padding:7px;
+  color:#fff;
+  border-radius:2px;
+  text-transform:uppercase;
+  margin: 30px 6px 0;
+  width:33em;
+  position:relative;
+  box-shadow: 0 5px #ba3c50;
+  cursor:pointer;
+}
+
+.submitForm:hover {
+  top:2px;
+  box-shadow: 0 3px #ba3c50;
+}
+
+.submitForm:active {
+  top:4px;
+  box-shadow: 0 0 #ba3c50;
+}
+
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
